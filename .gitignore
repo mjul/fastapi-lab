@@ -133,3 +133,4 @@ dmypy.json
 .vscode
 .mypy_cache
 docker-stack.yml
+cookiecutter-config-file.yml
