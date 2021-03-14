@@ -1,15 +1,18 @@
 # FastAPI Lab
+Playground for running Python FastAPI on top of PostgreSQL.
 
-# Installing the Conda Environment 
+## Generating the Template Project 
 The baseline project was generated using an Anaconda Python environment running the `cookiecutter` generator
-for full-stack FastAPI with PostgreSQL like so:
+for [full-stack FastAPI with PostgreSQL](https://github.com/tiangolo/full-stack-fastapi-postgresql) like so:
 
 ```bash
     # Add the Conda Forge channel to access cookiecutter, the template generator:
     conda config --append channels conda-forge
     conda install cookiecutter
-```
 
+    # Generate a template project
+    cookiecutter https://github.com/tiangolo/full-stack-fastapi-postgresql
+```
 
 
 # FastAPI Lab
