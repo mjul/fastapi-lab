@@ -14,6 +14,25 @@ for [full-stack FastAPI with PostgreSQL](https://github.com/tiangolo/full-stack-
     cookiecutter https://github.com/tiangolo/full-stack-fastapi-postgresql
 ```
 
+## Setting up Docker File Sharing
+You need to enable file sharing for the project directory in Docker to 
+allow the project to bind the local folders.
+Otherwise you will see an error like this:
+```
+ERROR: for fastapi-lab_backend_1  Cannot create container for service backend: status code not OK but 500:  ☺   ˙˙˙˙☺       ♀☻   FDocker.Core, Version=3.2.0.61498, Culture=neutral, PublicKeyToken=null♣☺   ←Docker.Core.DockerException♀      ClassNameMessage♦Data♫InnerExceptionHelpURL►StackTraceString▬RemoteStack
+WatsonBuckets☺☺♥♥☺☺☺ ☺ ☺▲System.Collections.IDictionary►System.Excepti☻☻   ♠♥   ←Docker.Core.DockerException♠♦   ▲Filesharing has been cancelled
+
+
+♠♣   Ś‼   at Docker.ApiServices.Mounting.FileSharing.<DoShareAsync>d__7.MoveNext() in C:\workspaces\PR-15387\src\github.com\docker\pinata\win\src\Docker.ApiServices\Mounting\FileSharing.cs:line 0
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.ExceptionServices.ExceptionDispatchInfo.Throw()
+   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   at Docker.ApiServices.Mounting.FileSharing.<ShareAsync>d__5.MoveNext() in C:\workspaces\PR-15387\src\github.com\docker\pinata\win\src\Docker.ApiServices\Mounting\FileSharing.cs:line 53
+```
+
+To fix the problem, open *Docker Desktop > Resources > File Sharing* and add the directory and restart the Docker daemon.
+
+"
 
 # FastAPI Lab
 
