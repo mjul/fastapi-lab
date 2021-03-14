@@ -127,3 +127,9 @@ dmypy.json
 
 # Pyre type checker
 .pyre/
+
+
+# Fast API template:
+.vscode
+.mypy_cache
+docker-stack.yml
